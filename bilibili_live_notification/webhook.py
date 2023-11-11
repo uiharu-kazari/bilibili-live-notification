@@ -36,9 +36,14 @@ async def trigger(
             for k, v in config.get_items(f"WEBHOOK_HEADER_{name}_", data)
         }
         body = config.get(f"WEBHOOK_BODY_{name}", data)
+        # import json
+        # body = json.dumps({
+        # "content": "Test message"
+        # })
+        # print('body', body)
         async with aiohttp.request(method, url, headers=headers, data=body) as resp:
             body = await resp.text(errors="replace")
-            if resp.status != 200:
+            if resp.status not in [200,204]:
                 raise RuntimeError(
                     "response status %d from %s: %s",
                     resp.status,

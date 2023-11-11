@@ -4,6 +4,9 @@ from datetime import datetime
 from typing import Iterator, Optional, Tuple
 
 import jinja2
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 
 
 class _ChainableDebugUndefined(jinja2.ChainableUndefined, jinja2.DebugUndefined):
