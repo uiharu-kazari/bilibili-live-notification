@@ -8,6 +8,7 @@ from datetime import datetime
 from typing import Dict, Tuple
 
 from bilibili_api import live
+from .config import CREDENTIAL_FTXY
 
 from . import config, emailtools, room, webhook, rate_limit
 
@@ -115,9 +116,20 @@ def _distinct_event(event, data: dict) -> bool:
 async def _handle_event(event, *, skip_room_data_update=False):
     event_type = event["type"]
     rid = str(event["room_display_id"])
+    print(f"EVENT TYPE is {event_type}.")
 
+    # list of event types 
+    # https://github.com/Nemo2011/bilibili-api/blob/main/bilibili_api/live.py
     if event_type == "LIVE":
         LOGGER.info(event)
+    elif event_type == "DANMU_MSG":
+        print(f"{event['data']['info'][2][1]}:{event['data']['info'][1]}")
+        #TODO: get time
+    elif event_type == "SUPER_CHAT_MESSAGE":
+        with open(f"sc_{time.strftime('%Y_%m_%d_%H_%M_%S')}.json", "w") as f:
+            # dump dict event to file
+            import json
+            json.dump(event, f, ensure_ascii=False, indent=2)
     else:
         LOGGER.debug(event)
 
@@ -157,7 +169,7 @@ async def _handle_event(event, *, skip_room_data_update=False):
 
 
 async def _subscribe(id: str) -> None:
-    room1 = live.LiveDanmaku(id)  # type: ignore
+    room1 = live.LiveDanmaku(id,credential=CREDENTIAL_FTXY)  # type: ignore
     room1.add_event_listener("ALL", _handle_event)  # type: ignore
 
     while True:

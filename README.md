@@ -1,5 +1,11 @@
 # B 站直播提醒
 
+## CHANGELOG
+
+* Using [https://github.com/Nemo2011/bilibili-api/] as bilibili api
+
+##
+
 [![docker](https://github.com/NateScarlet/bilibili-live-notification/workflows/docker/badge.svg)](https://github.com/NateScarlet/bilibili-live-notification/actions)
 
 在指定房间开播时发送邮件通知。

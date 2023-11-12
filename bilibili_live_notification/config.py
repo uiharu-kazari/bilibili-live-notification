@@ -7,6 +7,14 @@ import jinja2
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
+from bilibili_api import Credential
+
+CREDENTIAL_FTXY = Credential(sessdata=os.getenv("sessdata")
+                        ,bili_jct=os.getenv("bili_jct")
+                        ,buvid3=os.getenv("buvid3")
+                        ,dedeuserid=os.getenv("dedeuserid")
+                        ,ac_time_value=os.getenv("ac_time_value")
+)
 
 
 class _ChainableDebugUndefined(jinja2.ChainableUndefined, jinja2.DebugUndefined):
