@@ -5,6 +5,8 @@ import logging
 import os
 import time
 from datetime import datetime
+from datetime import datetime
+import pytz
 from typing import Dict, Tuple
 
 from bilibili_api import live
@@ -24,7 +26,6 @@ LOGGER = logging.getLogger(__name__)
 
 async def _handle_live(event):
     rid = event["room_display_id"]
-
     # TODO: support template for email subject and body
     now = datetime.now()
     room_data = await room.get(rid)
@@ -123,8 +124,16 @@ async def _handle_event(event, *, skip_room_data_update=False):
     if event_type == "LIVE":
         LOGGER.info(event)
     elif event_type == "DANMU_MSG":
-        print(f"{event['data']['info'][2][1]}:{event['data']['info'][1]}")
-        #TODO: get time
+        timestamp_ms = event['data']['info'][0][4]  # Extract the timestamp in milliseconds
+        # Convert to seconds
+        timestamp_s = timestamp_ms / 1000
+        date_time_utc = datetime.utcfromtimestamp(timestamp_s)
+        # Convert to GMT+8
+        timezone_gmt8 = pytz.timezone('Asia/Shanghai')
+        date_time_gmt8 = date_time_utc.replace(tzinfo=pytz.utc).astimezone(timezone_gmt8)
+        # Format the date and time for display with GMT+8 explicitly
+        formatted_date_time = date_time_gmt8.strftime('%Y-%m-%d %H:%M:%S GMT+8')
+        print(f"{event['data']['info'][2][1]}: {event['data']['info'][1]} @ {formatted_date_time}")
     elif event_type == "SUPER_CHAT_MESSAGE":
         with open(f"sc_{time.strftime('%Y_%m_%d_%H_%M_%S')}.json", "w") as f:
             # dump dict event to file

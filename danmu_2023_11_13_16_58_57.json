@@ -1,0 +1,92 @@
+{
+  "room_display_id": "22603245",
+  "room_real_id": 22603245,
+  "type": "DANMU_MSG",
+  "data": {
+    "cmd": "DANMU_MSG",
+    "info": [
+      [
+        0,
+        1,
+        25,
+        5816798,
+        1699862335270,
+        1699862335,
+        0,
+        "b7232696",
+        0,
+        0,
+        0,
+        "",
+        0,
+        "{}",
+        "{}",
+        {
+          "mode": 0,
+          "show_player_type": 0,
+          "extra": "{\"send_from_me\":false,\"mode\":0,\"color\":5816798,\"dm_type\":0,\"font_size\":25,\"player_mode\":0,\"show_player_type\":0,\"content\":\"⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄.\",\"user_hash\":\"3072534166\",\"emoticon_unique\":\"\",\"bulge_display\":0,\"recommend_score\":1,\"main_state_dm_color\":\"\",\"objective_state_dm_color\":\"\",\"direction\":0,\"pk_direction\":0,\"quartet_direction\":0,\"anniversary_crowd\":0,\"yeah_space_type\":\"\",\"yeah_space_url\":\"\",\"jump_to_url\":\"\",\"space_type\":\"\",\"space_url\":\"\",\"animation\":{},\"emots\":null,\"is_audited\":false,\"id_str\":\"115839bf582e710e5c140e85846551d774\",\"icon\":null,\"show_reply\":true,\"reply_mid\":0,\"reply_uname\":\"\",\"reply_uname_color\":\"\",\"hit_combo\":0}"
+        },
+        {
+          "activity_identity": "",
+          "activity_source": 0,
+          "not_show": 0
+        },
+        0
+      ],
+      "⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄.",
+      [
+        30115071,
+        "我推的虹夏",
+        0,
+        0,
+        0,
+        10000,
+        1,
+        ""
+      ],
+      [
+        18,
+        "雏草姬",
+        "永雏塔菲",
+        22603245,
+        13081892,
+        "",
+        0,
+        13081892,
+        13081892,
+        13081892,
+        0,
+        1,
+        1265680561
+      ],
+      [
+        26,
+        0,
+        5805790,
+        ">50000",
+        0
+      ],
+      [
+        "",
+        ""
+      ],
+      0,
+      0,
+      null,
+      {
+        "ts": 1699862335,
+        "ct": "59B6A68C"
+      },
+      0,
+      0,
+      null,
+      null,
+      0,
+      63,
+      [
+        0
+      ]
+    ],
+    "dm_v2": ""
+  }
+}
