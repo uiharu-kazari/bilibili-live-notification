@@ -134,11 +134,11 @@ async def _handle_event(event, *, skip_room_data_update=False):
         # Format the date and time for display with GMT+8 explicitly
         formatted_date_time = date_time_gmt8.strftime('%Y-%m-%d %H:%M:%S GMT+8')
         print(f"{event['data']['info'][2][1]}: {event['data']['info'][1]} @ {formatted_date_time}")
-    elif event_type == "SUPER_CHAT_MESSAGE":
-        with open(f"sc_{time.strftime('%Y_%m_%d_%H_%M_%S')}.json", "w") as f:
-            # dump dict event to file
-            import json
-            json.dump(event, f, ensure_ascii=False, indent=2)
+    # elif event_type == "SUPER_CHAT_MESSAGE" or event_type == "SUPER_CHAT_MESSAGE_JPN":
+    #     with open(f"sc_{time.strftime('%Y_%m_%d_%H_%M_%S')}.json", "w") as f:
+    #         # dump dict event to file
+    #         import json
+    #         json.dump(event, f, ensure_ascii=False, indent=2)
     else:
         LOGGER.debug(event)
 

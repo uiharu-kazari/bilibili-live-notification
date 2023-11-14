@@ -1,0 +1,70 @@
+{
+  "room_display_id": "22603245",
+  "room_real_id": 22603245,
+  "type": "SUPER_CHAT_MESSAGE",
+  "data": {
+    "cmd": "SUPER_CHAT_MESSAGE",
+    "data": {
+      "background_bottom_color": "#2A60B2",
+      "background_color": "#EDF5FF",
+      "background_color_end": "#405D85",
+      "background_color_start": "#3171D2",
+      "background_icon": "",
+      "background_image": "",
+      "background_price_color": "#7497CD",
+      "color_point": 0.7,
+      "dmscore": 120,
+      "end_time": 1699868858,
+      "gift": {
+        "gift_id": 12000,
+        "gift_name": "醒目留言",
+        "num": 1
+      },
+      "group_medal": null,
+      "id": 8399591,
+      "is_ranked": 1,
+      "is_send_audit": 1,
+      "medal_info": {
+        "anchor_roomid": 22603245,
+        "anchor_uname": "永雏塔菲",
+        "guard_level": 3,
+        "icon_id": 0,
+        "is_lighted": 1,
+        "medal_color": "#6154c",
+        "medal_color_border": 6809855,
+        "medal_color_end": 6850801,
+        "medal_color_start": 398668,
+        "medal_level": 27,
+        "medal_name": "雏草姬",
+        "special": "",
+        "target_id": 1265680561
+      },
+      "message": "如果今天黑听的话 一定会想到奇奇怪怪的东西吧！",
+      "message_font_color": "#A3F6FF",
+      "message_trans": "もし今日黒が聞いたらきっとチチの変なものを思い出すでしょう！",
+      "price": 30,
+      "rate": 1000,
+      "start_time": 1699868798,
+      "time": 60,
+      "token": "8F29B5A4",
+      "trans_mark": 0,
+      "ts": 1699868798,
+      "uid": 10126932,
+      "user_info": {
+        "face": "https://i0.hdslb.com/bfs/face/3a1bc0e278906a179a507f6909cfe4e2ed4aae16.jpg",
+        "face_frame": "https://i0.hdslb.com/bfs/live/80f732943cc3367029df65e267960d56736a82ee.png",
+        "guard_level": 3,
+        "is_main_vip": 0,
+        "is_svip": 0,
+        "is_vip": 0,
+        "level_color": "#61c05a",
+        "manager": 0,
+        "name_color": "#00D1F1",
+        "title": "0",
+        "uname": "永雏渡鸦",
+        "user_level": 20
+      }
+    },
+    "roomid": 22603245
+  }
+}

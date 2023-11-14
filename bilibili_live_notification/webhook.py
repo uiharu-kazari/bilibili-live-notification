@@ -36,6 +36,16 @@ async def trigger(
             for k, v in config.get_items(f"WEBHOOK_HEADER_{name}_", data)
         }
         body = config.get(f"WEBHOOK_BODY_{name}", data)
+        # output method, url, headers, body to a json file
+        # for debugging
+        # import json
+        # with open("debug.json", "w") as f:
+        #     json.dump({
+        #         "method": method,
+        #         "url": url,
+        #         "headers": headers,
+        #         "body": body
+        #     }, f)
 
         async with aiohttp.request(method, url, headers=headers, data=body) as resp:
             body = await resp.text(errors="replace")
