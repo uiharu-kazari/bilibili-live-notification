@@ -117,7 +117,7 @@ def _distinct_event(event, data: dict) -> bool:
 async def _handle_event(event, *, skip_room_data_update=False):
     event_type = event["type"]
     rid = str(event["room_display_id"])
-    print(f"EVENT TYPE is {event_type}.")
+    # print(f"EVENT TYPE is {event_type}.")
 
     # list of event types 
     # https://github.com/Nemo2011/bilibili-api/blob/main/bilibili_api/live.py

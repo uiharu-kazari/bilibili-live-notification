@@ -2,6 +2,7 @@
 
 ## CHANGELOG
 
+* Using `dotenv` to load environment variables
 * Using [https://github.com/Nemo2011/bilibili-api/] as bilibili api, add `Credential`
 * Update `WEBHOOK_BODY_SC` to match discord webhook rules
 
